@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+        <title>Name games</title>
+    </head>
+    <style>
+        .center {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+        </style>
+    <script type="text/javascript">
+    function simpl()
+    {
+    var n;
+    n=parseFloat(prompt("Please Enter Number of names"));    
+    var str = [];
+
+    for (i = 0; i < n; i++) {
+    str[i]=(prompt("Please enter the name:")); 
+    
+    }
+    str.sort();
+    for (i = 0; i < n; i++) {
+    document.write(str[i]+" ");
+    }
+        
+    }
+    </script>
+    <body>
+    <div class="center">
+        <input type="button" value="Sort the names" onclick="simpl()" />
+    </div>
+    </body>
+</html>

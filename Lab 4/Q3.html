@@ -1,0 +1,32 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Map</title>
+    <script>
+        function clicker(){
+            window.open("soccer.htm");
+        }
+
+        function text(){
+            document.getElementById('textbox').innerHTML='Football';
+        }
+
+        function remove(){
+            document.getElementById('textbox').innerHTML='';
+        }
+    </script>
+</head>
+<body>
+    <img src="soccer.png" usemap="#soccer">
+
+    <map name="soccer">
+        <area shape="rect" coords="27,13,197,177" onclick="clicker()" onmouseover="text()" onmouseout="remove()">      
+</map>
+
+<h2 id="textbox"></h2>
+
+</body>
+</html>

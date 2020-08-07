@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+        <title>Simple Interest</title>
+    </head>
+    <style>
+        .center {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+        </style>
+    <script type="text/javascript">
+    function simpl()
+    {
+    var p,r,t;
+    p=parseFloat(prompt("Enter Principle Amount"));
+    r=parseFloat(prompt("Enter Interest Rate"));
+    t=parseFloat(prompt("Enter Time in years"));
+    var si=(p*r*t)/100;
+    document.write("Simple Interest is: "+si);
+    }
+    </script>
+    <body>
+    <div class="center">
+        <input type="button" value="Simple Interest" onclick="simpl()" />
+    </div>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Image Hover</title>
+	</head>
+	<body>
+		<script language="javascript" type="text/javascript">
+			function OnImg()
+			{
+				document.body.style.background="blue"
+
+			}
+
+			function OutImg()
+			{
+				document.body.style.background="red"
+
+			}
+
+			function redirect()
+			{
+				location.replace("https://google.co.in")
+
+			}	
+		</script>
+		<img id="img1" onmouseover="OnImg()" onmouseout="OutImg()" onclick="redirect()" src="soccer.png" width="200" height="200" >
+
+	</body>
+</html>
