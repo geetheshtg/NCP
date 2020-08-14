@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4.DOB_Validator</title>
+
+    <script>
+        function validator(dob) {
+
+            var components, day, month, year, num_day, num_month, num_year;
+            var flag = 1;
+
+            try {
+                if (dob.length == 0)
+                    throw "Empty date";
+
+                components = dob.split('-')
+                if (components.length != 3)
+                    throw "Missing -";
+
+                day = components[0];
+                month = components[1];
+                year = components[2];
+                //document.write(components)
+                if (year.length != 4)
+                    throw "Year length incorrect";
+
+                if (month.length != 2)
+                    throw "Month format incorrect";
+
+                if (day.length != 2)
+                    throw "Day format incorrect";
+
+                num_day = parseInt(day);
+                num_month = parseInt(month);
+                num_year = parseInt(year);
+                //document.write('<br/>' + num_day + ' ' + num_month + ' ' + num_year + '<br/>');
+
+                if (isNaN(num_day) || isNaN(num_month) || isNaN(num_year))
+                    throw ('Value not a number/undefined');
+
+                if (num_year > 2020) {
+                    throw "Invalid Year"
+                } else {
+                    if (num_month > 12 || num_month < 1)
+                        throw "Invalid month"
+
+                    else {
+
+                        if ((num_month == 2 && (num_day > 29 || num_day < 1)) || (num_month in [1, 3, 5, 7, 8, 10,
+                                12
+                            ] && (num_day > 31 || num_day < 1)) || (num_month in [4, 6, 9, 11] && (num_day > 30 ||
+                                num_day < 1)))
+                            throw "Invalid day"
+
+                    }
+                }
+
+            } catch (error) {
+                if (error instanceof TypeError)
+                    document.write('Invalid number- cannot be converted to numeric');
+
+                else {
+                    document.write('Error : ' + error)
+                }
+                flag = 0;
+            }
+
+            if (flag)
+                document.write('Valid DOB');
+
+        }
+
+        dob = prompt('Enter DOB in the format DD-MM-YYYY')
+        validator(dob);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

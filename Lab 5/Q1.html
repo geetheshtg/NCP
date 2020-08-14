@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1.Text_To_Array</title>
+    <script>
+        function text_to_array() {
+
+            try {
+                inp = prompt('Enter some phrase, let me split it and store in an array')
+                if (inp.length == 0) {
+                    throw "Enter something..don't leave it empty";
+                }
+                words = inp.split(" ")
+                var i = 0;
+                for (i; i < words.length; i++) {
+                    document.write('Slot:' + i + ' Element:' + words[i] + '<br/>');
+                }
+                document.write(words)
+            } catch (error) {
+                document.write('<h1>Error:</h1>' + error)
+            }
+
+        }
+
+        text_to_array()
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

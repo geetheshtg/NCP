@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q6.Grades</title>
+
+    <script>
+        function assignGrade(num){
+            try{
+
+                val=parseInt(num);
+                
+                if (val<0 || val>100)
+                throw "Number not in range";
+
+                grade="F";
+                if (val>=90)
+                grade="A";
+
+                else if (val>=80)
+                grade="B";
+
+                else if (val>=70)
+                grade="C";
+
+                else if (val>=60)
+                grade="D";
+               return grade;
+            }
+
+            catch(error){
+                if (error instanceof TypeError)
+                document.write('Unparseable input');
+
+                else
+                document.write('Error: '+ error);
+            }
+        }
+
+        var i=0;
+        var j;
+
+        while (i<5){
+            for (j=60; j<=100; j++){
+                g=assignGrade(j);
+                var article;
+                if (g =="A" || g=="F")
+                article='an ';
+
+                else
+                article="a ";
+
+
+                document.write('For '+j+' you got '+ article+g+'<br/>');
+            }
+            document.write('<br/><hr><br/>')
+            i++;
+            
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5.FizzBuzz</title>
+</head>
+
+<script>
+
+    function fizzbuzz(){
+        try{
+            
+            var i=1;
+            for (i; i<=100; i++){
+                
+                if(i%3==0 && i%5==0){
+                    document.write('FizzBuzz ');
+                    continue;
+                }
+
+                if (i%3==0){
+                    document.write('Fizz ');
+                    continue;
+                }
+                if (i%5==0){
+                    document.write('Buzz ');
+                    continue;
+                }
+
+
+                document.write(i+' ');
+ 
+                }
+            }
+
+        catch(error){
+            if(error instanceof TypeError)
+            document.write('Not a number');
+
+            else
+            document.write('Error : '+error);
+        }
+
+    }
+
+ fizzbuzz();
+</script>
+<body>
+    
+</body>
+</html>

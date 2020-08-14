@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Q2.Reverse_Sort</title>
+
+ </head>
+<body>
+<script type="text/javascript">
+var words=prompt("Enter an array of space separated words to sort it in reverse chronological order");
+
+    reverse_sort(words);
+    function reverse_sort(words)
+    {
+        try{
+            if(words==" ")
+            {
+            throw e;
+            
+            }
+            else
+            {
+            word=words.split(' ');
+            document.write("Reverse array is: "+word.sort().reverse()+"<br>"); 
+            }
+        }
+        catch(e)
+        {
+        document.write("Enter a valid paragraph");
+        }
+        
+    }
+    
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3.Histogram</title>
+</head>
+
+<style>
+    ul,
+    li {
+        list-style: none;
+    }
+</style>
+
+<body>
+    <ul id="ul"></ul>
+
+    <script>
+        let arr = []
+        let x = prompt("Enter a number:")
+        arr.push(parseInt(x))
+        while (x) {
+            x = prompt("Enter a number:")
+            arr.push(parseInt(x))
+        }
+        let ul = document.getElementById('ul')
+        for (let i = 0; i < arr.length - 1; i++) {
+            li = document.createElement('li')
+            li.appendChild(document.createTextNode(hist(arr[i])))
+            ul.appendChild(li)
+        }
+
+        function hist(x) {
+            let str = ""
+            for (let i = 0; i < x; i++) {
+                str += '*'
+            }
+            return str
+        }
+    </script>
+</body>
+
+</html>
