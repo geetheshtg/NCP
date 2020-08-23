@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+</head>
+
+
+
+<body>
+    <img src="" id="image" style="height: 300px; width: auto;">
+    <h3 id="desc"></h3>
+
+    <button id="gen" onclick="thefunc()">Randomize</button>
+    <table border="1px" style="border-style: dotted;">
+        <tr>
+            <td>Iron Man</td>
+            <td id="1">0</td>
+        </tr>
+        <tr>
+            <td>Thor</td>
+            <td id="2">0</td>
+        </tr>
+        <tr>
+            <td>Captain America</td>
+            <td id="3">0</td>
+        </tr>
+        <tr>
+            <td>Captain Marvel</td>
+            <td id="4">0</td>
+        </tr>
+
+        
+        
+        
+        
+    </table>
+
+    <script>
+        var n = {"1": 0,"2": 0,"3": 0,"4": 0,"5": 0,}
+
+        var texts = ["Iron man","Thor","Captain America","Captain Marvel"]
+
+        var images = [
+            "https://www.pixel4k.com/wp-content/uploads/2019/08/iron-man-4k-new-artworks_1565052744.jpg",
+            "https://cdn.vox-cdn.com/thumbor/fWoUO9_LWDUbUBItaZDUvqXVIOw=/0x0:1200x503/1200x800/filters:focal(504x156:696x348)/cdn.vox-cdn.com/uploads/chorus_image/image/64743416/thor6.0.jpeg",
+            "https://images.hdqwalls.com/download/captain-america-shield-with-hammer-v9-2048x2048.jpg",
+            "https://wallpapercave.com/wp/wp3694892.jpg"
+            ]
+
+
+        function thefunc()
+        {
+            for(var i=0;i<10;i++)
+            {
+                setTimeout(function () {
+                    var rand = Math.floor(Math.random() * 5)
+                    if (document.getElementById(String(rand + 1)).innerText == "0") {
+                        document.getElementById(String(rand + 1)).innerText = "1"
+                        n[String(rand + 1)] = 1
+                    } else {
+                        document.getElementById(String(rand + 1)).innerText = String(parseInt(document.getElementById(String(rand + 1)).innerText) + 1)
+                        n[String(rand + 1)] = parseInt(document.getElementById(String(rand + 1)).innerText) + 1
+                    }
+                    document.getElementById('desc').innerText = texts[rand]
+                    document.getElementById("image").src = images[rand]
+                }, 2000 * i); 
+                
+                
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

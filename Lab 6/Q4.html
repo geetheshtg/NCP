@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+
+<style>
+    .container {
+        display: flex;
+        color: #ff0000;
+    }
+
+    .alarmForm {
+        flex: 0.3;
+        color: #ff0000;
+    }
+
+    .timeDisplay {
+        flex: 0.4;
+        color: #ff0000;
+    }
+
+    .stopwatch {
+        flex: 0.3;
+        color: #ff0000;
+    }
+
+    h1 {
+        font-size: 70px;
+        color: #ff0000;
+    }
+
+    #showAlert {
+        display: none;
+    }
+
+
+    input[type=submit]
+    {
+        color: #ff0000;
+    }
+
+    input[type=button]
+    {
+        color: #ff0000;
+    }
+</style>
+
+<body onload="startTime()">
+
+    <div class="container">
+
+        <div class="timeDisplay">
+            <h1 id="clock"></h1>
+        </div>
+    </div>
+    <div class="alarmForm">
+
+        <h2 id="showAlert">Times up!!!</h2>
+
+        <form action="#" method="POST" id="setAlarm">
+            <br><br><br>
+            <table>
+                <tr>
+                    <th>
+                        <h3>Set alarm</h3>
+                    </th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td><input type="date" name="date" id="date"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="time" placeholder="HH:MM:SS"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Set"></td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+
+
+    <div class="stopwatch">
+        <h2 id="stopwatch"></h2>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+    </div>
+
+
+
+
+
+
+    <script>
+        function startTime() {
+            var today = new Date();
+
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+
+            m = checkTime(m);
+            s = checkTime(s);
+
+            document.getElementById('clock').innerHTML =
+                h + ":" + m + ":" + s;
+
+            var t = setTimeout(startTime, 1000);
+        }
+
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };
+            return i;
+        }
+
+        document.getElementById("setAlarm").addEventListener("submit", function (e) {
+            let alert = new Date()
+
+            let time = document.getElementById("time").value
+
+            let arr = time.split(":")
+
+            let h, m, s, d
+            d = String(document.getElementById("date").value)
+            h = arr[0]
+            m = arr[1]
+            s = arr[2]
+            let t = h + ":" + m + ":" + s
+
+            if (String(alert.getMonth() + 1).length == 1) {
+                nd = String(alert.getFullYear()) + "-" + "0" + String(alert.getMonth() + 1) + "-" + String(alert.getUTCDate())
+            } else {
+                nd = String(alert.getFullYear()) + "-" + String(alert.getMonth() + 1) + "-" + String(alert.getUTCDate())
+            }
+
+            let nh = String(alert.getHours())
+            let nm = String(alert.getMinutes())
+            let ns = String(alert.getSeconds())
+
+            if (nh.length == 1) {
+                nh = "0" + nh
+            }
+            if (nm.length == 1) {
+                nm = "0" + nm
+            }
+            if (ns.length == 1) {
+                ns = "0" + ns
+            }
+
+            let nt = String(nh) + ":" + String(nm) + ":" + String(ns)
+
+            if ((nt == t) & (nd == d)) {
+                console.log("true")
+                document.getElementById("showAlert").style.display = "block"
+            }
+            else {
+                console.log("false")
+            }
+
+            e.preventDefault()
+        })
+
+        document.getElementById("start").addEventListener("click", function (e) {
+
+            e.preventDefault()
+        })
+        document.getElementById("stop").addEventListener("click", function (e) {
+
+            e.preventDefault()
+        })
+        document.getElementById("reset").addEventListener("click", function (e) {
+
+            e.preventDefault()
+        })
+
+        function startTimer() {
+            var today = new Date();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            var ms = today.getMilliseconds();
+            document.getElementById('clock').innerHTML =
+                m + ":" + s + ":" + ms;
+
+            var t = setTimeout(startTimer, 1000);
+        }
+    </script>
+</body>
+
+</html>
