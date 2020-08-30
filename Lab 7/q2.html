@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="q2.css" />
+    </head>
+    <body>
+        <div id="container" class="container">
+            <form id="contact" method="post">
+                <h3>Form</h3>
+                <fieldset>
+                    <input id="fname" placeholder="First Name *" type="text" tabindex="1" required autofocus />
+                    <input id="mname" placeholder="Middle Name" type="text" tabindex="1" />
+                    <input id="lname" placeholder="Last Name *" type="text" tabindex="1" required autofocus />
+                </fieldset>
+                <fieldset>
+                    <input type="text" id="initials" placeholder="Father Name *" class="field text-field initials-field">
+                </fieldset>
+                <fieldset>
+                    <textarea id="address" placeholder="Address" tabindex="2" required></textarea>
+                </fieldset>
+                <fieldset>
+                    <textarea id="address" placeholder="Permanent Address" tabindex="2" required></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <input placeholder="Email" type="text" id="mail1" tabindex="3" required autofocus />
+                    <span class="at">@</span>
+                    <input placeholder="Domain" type="text" id="mail2" tabindex="4" required autofocus />
+                </fieldset>
+                <fieldset class="gender">
+                    <label>Gender:</label>
+                    <span>
+                        <input type="radio" id="female" name="gender" value="Female" checked />
+                        <label for="female">Female</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="male" name="gender" value="Male" />
+                        <label for="male">Male</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="other" name="gender" value="Other" />
+                        <label for="other">Other</label>
+                    </span>
+                </fieldset>
+                <fieldset>
+                    <label class="form-label" for="dateOfBirth">Date of birth: </label>
+                    <input type="date" id="dateOfBirth" class="field date-field dob-field" min="1900-01-01" max="2015-09-18"  required>
+           <span class="message"></span>
+                </fieldset>
+                <fieldset>
+                    <label class="age-range" for="age-range">Age Group: </label>
+                    <select id="age-range">
+                        <option value="default">Choose Range..</option>
+                        <option value="0-18">Less than 18</option>
+                        <option value="18-35">18 - 35</option>
+                        <option value="35+">Above 35</option>
+                    </select>
+                </fieldset>
+                <span id="guardian-optional"> </span>
+                <div class="margin"></div>
+                <fieldset>
+                    <button name="submit" type="submit" id="submit_button" data-submit="...Sending">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+    <script src="q2.js"></script>
+</html>
