@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="form.css" />
+    <meta charset="UTF-8">
+    <title>Engineering</title>
+    <style>
+        body {
+  color: Black;
+}
+.center_div{
+    margin: 0 auto;
+    width:80% /* value of your choice which suits your alignment */
+    form.solid {border-style: solid;}
+}
+
+div {
+  border-radius: 5px;
+  background-color: #c0fff5;
+  padding: 20px;
+}
+
+    </style>
+        <script type="text/javascript">
+        function submitmarks()
+        {
+        var phy=document.getElementById("physics").value
+        var chem = document.getElementById("chem").value
+        var mathbio = document.getElementById("mathbio").value
+        var dob= document.getElementById("dob").value
+        var split_dob = dob.split("-");
+        var month = split_dob[1];
+        var day = split_dob[2];
+        var year = split_dob[0];
+        var dob_asdate = new Date(year, month, day);
+        var today = new Date();
+        var mili_dif = Math.abs(today.getTime() - dob_asdate.getTime());
+        var age = (mili_dif / (1000 * 3600 * 24 * 365.25));
+        console.log(Math.floor(age));
+
+        if(age>17 && age <23 && phy>50&& chem>50 && mathbio >50)
+        {
+            alert("Eligible")
+        }
+        else{
+            alert("Not eligible")
+        }
+
+    }
+
+        </script>
+
+</head>
+<body>
+
+<form class="container center_div" >
+    <div>
+    <p1><strong>Username</strong></p1>
+				  <input type="text" id="text1" onkeypress="return IsAlphaNumeric(event);" ondrop="return false;" onpaste="return false;" />
+				  <span id="error" style="color: Black; display: none">* Special Characters not allowed.</span>
+                <br>
+                <script>var specialKeys = new Array();
+		 specialKeys.push(8);  //Backspace
+		 specialKeys.push(9);  //Tab
+		 specialKeys.push(46); //Delete
+		 specialKeys.push(36); //Home
+		 specialKeys.push(35); //End
+		 specialKeys.push(37); //Left
+		 specialKeys.push(39); //Right
+
+     function IsAlphaNumeric(e) {
+         var keyCode = e.keyCode == 0 ? e.charCode : e.keyCode;
+         var ret = ((keyCode >= 48 && keyCode <= 57) || (keyCode >= 65 && keyCode <= 90) || keyCode == 32 || (keyCode >= 97 && keyCode <= 122) || (specialKeys.indexOf(e.keyCode) != -1 && e.charCode != e.keyCode));
+         document.getElementById("error").style.display = ret ? "none" : "inline";
+         return ret;
+     }</script>
+	</div>
+	<div class="container">
+
+
+
+                <div >
+                    <label id="dob-label" for="dob"> <strong>* Date of Birth: </strong></label>
+                </div>
+                <div >
+                    <input type="date" name="dob" id="dob" class="input-field"
+                        placeholder="Student's Age">
+                </div>
+
+
+                <div >
+                    <label for="countrycode"><strong>* Phone Number</strong></label>
+                </div>
+                <div >
+                    <select id="countrycode" name="countrycode" class="dropdown">
+                        <option disabled value>Choose Code</option>
+                        <option value="+91">+91</option>
+                        <option value="+90">+90</option>
+                        <option value="+67">+67</option>
+                    </select>
+
+                    <input type="number" name="mobile" id="mobile" class="input-field-spl" required placeholder="Enter phone number" min=1000000 max="9999999999">
+                </div>
+
+
+                <div >
+                    <label for="userRating"><strong>* Gender:</strong></label>
+                </div>
+                <div >
+                    <ul style="list-style: none;">
+                        <li class="radio"><label>Male<input name="radio-buttons" value="1" type="radio"
+                                    class="userRatings"></label></li>
+                        <li class="radio"><label>Female<input name="radio-buttons" value="2" type="radio"
+                                    class="userRatings"></label></li>
+                        <li class="radio"><label>Other<input name="radio-buttons" value="3" type="radio"
+                                    class="userRatings"></label></li>
+                    </ul>
+				</div>
+			</div>
+
+
+
+
+<div>
+
+    <p><strong>Marks</strong></p>
+</div>
+
+                <div >
+                    <label id="physics-label" for="username"><strong>* Physics</strong> </label>
+                </div>
+                <div >
+                    <input min="0" max="100" type="number" name="physics" id="physics" class="input-field" required placeholder="Enter Physics Marks">
+                </div>
+                <div >
+                    <label id="chem-label" for="chem"><strong>* Chemistry </strong></label>
+                </div>
+                <div >
+                    <input min="0" max="100" type="number" name="chem" id="chem" class="input-field" required placeholder="Enter Chemistry Marks">
+                </div>
+                <div >
+                    <label id="mathbio-label" for="mathbio"><strong>* Bio</strong> </label>
+                </div>
+                <div >
+                    <input min="0" max="100" type="number" name="mathbio" id="mathbio" class="input-field" required placeholder="Enter Bio Marks">
+                </div>
+            </div>
+            <button id="submit" type="button" onclick="submitmarks()">Submit</button>
+        </form>
+
+
+
+
+</body>
+</html>
