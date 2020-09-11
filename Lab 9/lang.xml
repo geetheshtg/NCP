@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="prac.xsl" type="text/xsl" ?>
+<!DOCTYPE note [
+<!ELEMENT survey (region,location,feature,rov,area,depth,dist,shipping,items)>
+<!ELEMENT region (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT feature (#PCDATA)>
+<!ELEMENT rov (#PCDATA)>
+<!ELEMENT area (#PCDATA)>
+<!ELEMENT depth (#PCDATA)>
+<!ELEMENT dist (#PCDATA)>
+<!ELEMENT shipping (#PCDATA)>
+<!ELEMENT items (#PCDATA)>
+]>
+<survey>
+
+  <cd>
+
+    <region>Atlantic</region>
+    <location>Carter</location>
+    <feature>Seamount</feature>
+    <rov>5</rov>
+    <area>2.78</area>
+    <depth>200-2500</depth>
+    <dist>630</dist>
+    <shipping>0.12</shipping>
+    <items>12.23</items>
+
+  </cd>
+
+  <cd>
+    <region>Atlantic</region>
+    <location>Knipovich</location>
+    <feature>Seamount</feature>
+    <rov>3</rov>
+    <area>2.18</area>
+    <depth>600-2800</depth>
+    <dist>1360</dist>
+    <shipping>0.23</shipping>
+    <items>2.29</items>
+  </cd>
+
+  <cd>
+    <region>Atlantic</region>
+    <location>VEMA</location>
+    <feature>Fracture Zone</feature>
+    <rov>3</rov>
+    <area>1.80</area>
+    <depth>600-3000</depth>
+    <dist>1040</dist>
+    <shipping>0.07</shipping>
+    <items>5.56</items>
+  </cd>
+
+  <cd>
+    <region>Atlantic</region>
+    <location>Vayda</location>
+    <feature>Seamount</feature>
+    <rov>3</rov>
+    <area>3.10</area>
+    <depth>400-2300</depth>
+    <dist>1170</dist>
+    <shipping>0.01</shipping>
+    <items>1.94</items>
+  </cd>
+
+  <cd>
+    <region>Atlantic</region>
+    <location>Gramberg</location>
+    <feature>Seamount</feature>
+    <rov>2</rov>
+    <area>1.70</area>
+    <depth>900-2200</depth>
+    <dist>940</dist>
+    <shipping>0.21</shipping>
+    <items>0.59</items>
+  </cd>
+
+  <cd>
+    <region>Indian</region>
+    <location>Coral</location>
+    <feature>Seamount</feature>
+    <rov>5</rov>
+    <area>2.04</area>
+    <depth>500-1500</depth>
+    <dist>1610</dist>
+    <shipping>0.01</shipping>
+    <items>1.47</items>
+  </cd>
+
+  <cd>
+    <region>Indian</region>
+    <location>Melville</location>
+    <feature>Bank</feature>
+    <rov>4</rov>
+    <area>1.35</area>
+    <depth>100-1300</depth>
+    <dist>1440</dist>
+    <shipping>0.00</shipping>
+    <items>13.33</items>
+  </cd>
+
+  <cd>
+    <region>Indian</region>
+    <location>Middle of what</location>
+    <feature>Seamount</feature>
+    <rov>3</rov>
+    <area>0.41</area>
+    <depth>1000-1400</depth>
+    <dist>1460</dist>
+    <shipping>0.00</shipping>
+    <items>2.44</items>
+  </cd>
+
+  <cd>
+    <region>Indian</region>
+    <location>Sapmer</location>
+    <feature>Seamount</feature>
+    <rov>1</rov>
+    <area>0.46</area>
+    <depth>300-700</depth>
+    <dist>1390</dist>
+    <shipping>0.00</shipping>
+    <items>17.39</items>
+  </cd>
+  <cd>
+    <region>Indian</region>
+    <location>Atlantis</location>
+    <feature>Bank</feature>
+    <rov>3</rov>
+    <area>1.34</area>
+    <depth>700-1200</depth>
+    <dist>1320</dist>
+    <shipping>0.10</shipping>
+    <items>0.75</items>
+  </cd>
+
+</survey>
