@@ -1,0 +1,19 @@
+<?xml version = "1.0"?>
+
+<xs:schema xmlns:xs = "http://www.w3.org/2001/XMLSchema">
+
+   
+<xs:element name="patient">
+  <xs:complexType>
+     <xs:sequence>
+         <xs:element name = "patname" type = "xs:string"/>
+         <xs:element name = "patid" type = "xs:positiveInteger"/>
+         <xs:element name = "patage" type = "xs:positiveInteger"/>
+         <xs:element name = "disease" type = "xs:string"/>
+         <xs:element name = "tdname" type = "xs:string"/>
+         <xs:element name = "roomno" type = "xs:positiveInteger"/>
+      </xs:sequence>
+  </xs:complexType>
+</xs:element> 
+
+</xs:schema>
