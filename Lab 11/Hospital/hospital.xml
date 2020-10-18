@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hospital SYSTEM "hospital.dtd" [
+<!ELEMENT hospital (remars)>
+<!ELEMENT summary (#PCDATA)>
+]>
+
+<?xml-stylesheet type="text/xsl" href="hospital.xsl"?>
+
+<hospital 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="hospital.xsd">
+
+    <patient>
+        <patname>Abhinaya </patname>
+        <patid>1</patid>
+        <patage> 19 </patage>
+        <disease> Stomach infection </disease>
+        <tdname> Dr.Arjun </tdname>
+        <roomno> 100 </roomno>
+        <remarks>None </remarks>
+    </patient>
+    <patient>
+        <patname> Abithaa</patname>
+        <patid>2</patid>
+        <patage> 25 </patage>
+        <disease> Cholera </disease>
+        <tdname>Dr.Vikram </tdname>
+        <roomno> 50  </roomno>
+        <remarks>None </remarks>
+    </patient>
+    <patient>
+        <patname> Lochan</patname>
+        <patid>3</patid>
+        <patage> 51 </patage>
+        <disease> Chicken Pox </disease>
+        <tdname>Dr.Vamshi </tdname>
+        <roomno> 10 </roomno>
+        <remarks>None </remarks>
+    </patient>
+    <patient>
+        <patname> Gowri</patname>
+        <patid>42</patid>
+        <patage> 21 </patage>
+        <disease> Skin infection</disease>
+        <tdname>Dr.Venkat </tdname>
+        <roomno> 12  </roomno>
+        <remarks>None </remarks>
+    </patient>
+    <patient>
+        <patname> Badri</patname>
+        <patid>234</patid>
+        <patage> 22 </patage>
+        <disease> Migrane</disease>
+        <tdname>Dr.Ramanujam </tdname>
+        <roomno> 4  </roomno>
+        <remarks>None </remarks>
+    </patient>
+    <patient>
+        <patname> pooja</patname>
+        <patid>512</patid>
+        <patage> 30 </patage>
+        <disease> Malaria</disease>
+        <tdname>Dr.Srinath </tdname>
+        <roomno> 678  </roomno>
+        <remarks>None </remarks>
+    </patient>
+    
+    <patient>
+        <patname> Aradhana</patname>
+        <patid>456</patid>
+        <patage> 35 </patage>
+        <disease> Malaria </disease>
+        <tdname> Dr.Ram</tdname>
+        <roomno> 609 </roomno>
+        <remarks>None </remarks>    
+    </patient>
+
+    <patient>
+        <patname> Anjali</patname>
+        <patid>65</patid>
+        <patage> 29 </patage>
+        <disease> Dengue </disease>
+        <tdname>Dr.Rajshree </tdname>
+        <roomno> 500  </roomno>
+        <remarks>None </remarks>
+    </patient>
+
+    <patient>
+        <patname> Arnab</patname>
+        <patid>93</patid>
+        <patage> 55 </patage>
+        <disease> Cholera </disease>
+        <tdname>Dr.Vijay </tdname>
+        <roomno> 290  </roomno>
+        <remarks>None </remarks>
+    </patient>
+
+    <patient>
+        <patname> Ashwin</patname>
+        <patid>1236</patid>
+        <patage> 85 </patage>
+        <disease> Asthma </disease>
+        <tdname>Dr.Shree </tdname>
+        <roomno> 348  </roomno>
+        <remarks>None </remarks>
+    </patient>
+    <patient>
+        <patname> Parvathi Sanjana</patname>
+        <patid>9776</patid>
+        <patage> 78 </patage>
+        <disease> Asthma</disease>
+        <tdname>Dr.Sai </tdname>
+        <roomno> 341  </roomno>
+        <remarks>None </remarks>
+    </patient>
+    <patient>
+        <patname> Parvathi Biju</patname>
+        <patid>754</patid>
+        <patage> 57 </patage>
+        <disease> Arthritis  </disease>
+        <tdname>Dr.Abhinav </tdname>
+        <roomno> 345  </roomno>
+        <remarks>None </remarks>
+    </patient>
+
+  <patient>
+        <patname> Rajesh</patname>
+        <patid>3562</patid>
+        <patage> 59 </patage>
+        <disease> Arthritis </disease>
+        <tdname>Dr.Morrison </tdname>
+        <roomno> 450  </roomno>
+        <remarks>None </remarks>
+    </patient>
+
+    <patient>
+        <patname> Geetesh</patname>
+        <patid>653</patid>
+        <patage> 67 </patage>
+        <disease> Alzheimers </disease>
+        <tdname>Dr.Vaishnav </tdname>
+        <roomno> 234  </roomno>
+        <remarks>None </remarks>
+    </patient>
+    <patient>
+        <patname> Priteev</patname>
+        <patid>829</patid>
+        <patage> 88 </patage>
+        <disease> Cholera </disease>
+        <tdname>Dr.Ruksana </tdname>
+        <roomno> 678  </roomno>
+        <remarks>None </remarks>
+    </patient>
+    
+
+</hospital>
