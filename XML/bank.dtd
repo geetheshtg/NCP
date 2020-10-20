@@ -1,0 +1,51 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT banking (customer)+>
+<!ATTLIST banking
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT customer (customer-name,customer-street,customer-city,
+                    account-number,branch-name,balance,recent-trans,deposit,withdraw,loan)>
+<!ATTLIST customer
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT customer-name (#PCDATA)>
+<!ATTLIST customer-name
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT customer-street (#PCDATA)>
+<!ATTLIST customer-street
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT customer-city (#PCDATA)>
+<!ATTLIST customer-city
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT account-number (#PCDATA)>
+<!ATTLIST account-number
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT branch-name (#PCDATA)>
+<!ATTLIST branch-name
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT balance (#PCDATA)>
+<!ATTLIST balance
+  xmlns CDATA #FIXED ''>
+  
+<!ELEMENT recent-trans (#PCDATA)>
+<!ATTLIST recent-trans
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT deposit (#PCDATA)>
+<!ATTLIST deposit
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT withdraw (#PCDATA)>
+<!ATTLIST withdraw
+  xmlns CDATA #FIXED ''>
+  
+<!ELEMENT loan (#PCDATA)>
+<!ATTLIST loan
+  xmlns CDATA #FIXED ''>
+  

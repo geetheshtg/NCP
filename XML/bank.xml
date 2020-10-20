@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE banking SYSTEM "bank.dtd">
+<?xml-stylesheet type="text/xsl" href="bank.xsl" ?>
+
+<banking  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="bank.xsd">
+
+  <customer>
+    <customer-name> Name1 </customer-name>
+    <customer-street> Street1 </customer-street>
+    <customer-city> City1 </customer-city>
+    <account-number> Acc1 </account-number>
+    <branch-name> Branch1 </branch-name>
+    <balance> 4000 </balance>
+	<recent-trans> 300 </recent-trans>
+	<deposit> 3000 </deposit>
+	<withdraw> 300 </withdraw>
+	<loan> 500 </loan>
+	
+  </customer>
+  <customer>
+    <customer-name> Name2 </customer-name>
+    <customer-street> Street2 </customer-street>
+    <customer-city> City2 </customer-city>
+    <account-number> Acc2 </account-number>
+    <branch-name> Branch2 </branch-name>
+    <balance> 7500 </balance>
+	<recent-trans> 600 </recent-trans>
+	<deposit> 2000 </deposit>
+	<withdraw> 800 </withdraw>
+	<loan> 0 </loan>
+	
+  </customer>
+  <customer>
+    <customer-name> Name3 </customer-name>
+    <customer-street> Street1 </customer-street>
+    <customer-city> City1 </customer-city>
+    <account-number> Acc3 </account-number>
+    <branch-name> Branch1 </branch-name>
+    <balance> 6000 </balance>
+	<recent-trans> 800 </recent-trans>
+	<deposit> 1000 </deposit>
+	<withdraw> 500 </withdraw>
+	<loan> 0 </loan>
+	
+  </customer>
+  <customer>
+    <customer-name> Name4 </customer-name>
+    <customer-street> Street4 </customer-street>
+    <customer-city> City1 </customer-city>
+    <account-number> Acc4 </account-number>
+    <branch-name> Branch1 </branch-name>
+    <balance> 4000 </balance>
+	<recent-trans> 300 </recent-trans>
+	<deposit> 3000 </deposit>
+	<withdraw> 300 </withdraw>
+	<loan> 500 </loan>
+	
+  </customer>
+  <customer>
+    <customer-name> Name5 </customer-name>
+    <customer-street> Street5 </customer-street>
+    <customer-city> City5 </customer-city>
+    <account-number> Acc5 </account-number>
+    <branch-name> Branch3 </branch-name>
+    <balance> 500 </balance>
+	<recent-trans> 5000 </recent-trans>
+	<deposit> 1000 </deposit>
+	<withdraw> 5000 </withdraw>
+	<loan> 1000 </loan>
+	
+  </customer>
+  <customer>
+    <customer-name> Name6 </customer-name>
+    <customer-street> Street6 </customer-street>
+    <customer-city> City6 </customer-city>
+    <account-number> Acc6 </account-number>
+    <branch-name> Branch6 </branch-name>
+    <balance> 1000 </balance>
+	<recent-trans> 300 </recent-trans>
+	<deposit> 3000 </deposit>
+	<withdraw> 300 </withdraw>
+	<loan> 500 </loan>
+	
+  </customer>
+  <customer>
+    <customer-name> Name7 </customer-name>
+    <customer-street> Street6 </customer-street>
+    <customer-city> City6 </customer-city>
+    <account-number> Acc7 </account-number>
+    <branch-name> Branch6 </branch-name>
+    <balance> 4000 </balance>
+	<recent-trans> 300 </recent-trans>
+	<deposit> 3000 </deposit>
+	<withdraw> 300 </withdraw>
+	<loan> 500 </loan>
+	
+  </customer>
+  <customer>
+    <customer-name> Name8 </customer-name>
+    <customer-street> Street1 </customer-street>
+    <customer-city> City1 </customer-city>
+    <account-number> Acc1 </account-number>
+    <branch-name> Branch1 </branch-name>
+    <balance> 8000 </balance>
+	<recent-trans> 30 </recent-trans>
+	<deposit> 3900 </deposit>
+	<withdraw> 500 </withdraw>
+	<loan> 0 </loan>
+	
+  </customer>
+  
+</banking>
