@@ -1,0 +1,33 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT alumni-system (alumnus)>
+<!ATTLIST alumni-system
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT alumnus (first-name,last-name,username,position,company,skillset)>
+<!ATTLIST alumnus
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT first-name (#PCDATA)>
+<!ATTLIST first-name
+  xmlns CDATA #FIXED ''>
+  
+<!ELEMENT last-name (#PCDATA)>
+<!ATTLIST last-name
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT username (#PCDATA)>
+<!ATTLIST username
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT position (#PCDATA)>
+<!ATTLIST position
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT company (#PCDATA)>
+<!ATTLIST company
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT skillset (#PCDATA)>
+<!ATTLIST skillset
+  xmlns CDATA #FIXED ''>
